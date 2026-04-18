@@ -61,50 +61,177 @@ nav a:hover{
 </style>
 
 
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: grey;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        .site-name {
+            color: black;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        /* Gallery Styles */
+        .gallery-section {
+            padding: 40px 20px;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .gallery-item p {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #3c3f42;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+
+<body>
+
 </head>
 <body>
 
-<header>
+<header style="background-color: grey; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;">
 
-  <div class="logo-section">
-        <img src="pictures/logo.png.png" alt="sand seed logo" width="60" height="60">
-        <span class="site-name">Sand Seed Academy</span>
+    <!-- LEFT SIDE: Logo + School Name -->
+    <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="pictures/logo.png.png" alt="Sand Seed Logo" width="65" height="65" style="border-radius: 50%; object-fit: contain;">
+        <span style="color: white; font-size: 20px; font-weight: bold; font-family: Arial, sans-serif;">Sand Seed Academy</span>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand"  href="Gallery.html">SandSeed Academy</a>
-            <button class="navbar-toggler"  type="button"  data-bs-toggler="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggle-icon"></span>
-
+    <!-- RIGHT SIDE: Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-radius: 6px;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Sand Seed Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
-<nav class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link"  href="about.html"> About Us </a>
-    </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Fees.html">School Fees</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Gallery.html">Photo Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <li class="nav-item">
-        <a class="nav-link"  href="Fees.html">School Fees</a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact Us</a>
-    </li>
-    </li>
-    </li>
-</ul>
-
-    </li>
-</ul>
-</nav>
-</div>
-</nav>
 </header>
+
+<!--gallery section-->
+<section class="gallery-section">
+        <h2>School's Photo Gallery</h2>
+
+        <div class="gallery-grid">
+
+            <!-- Photo 1 -->
+            <div class="gallery-item">
+                <img src="pictures/activity sandseed.jpg" alt="knitting picture">
+                <p>During arts and crafts we usually have student make something that they can take home with</p>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="gallery-item">
+                <img src="pictures/hand painting sandseed.jpg" alt="hand painting">
+                <p>We had student's hand paint during reacreational hours and let them mix their favourite colors to also teach them about color mixing</p>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="gallery-item">
+                <img src="pictures/leaf painting sandseed.jpg" alt="Leaf ainting Class">
+                <p>We had student's try something new by using leaves to paint whatever their imaginations had to offer</p>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="gallery-item">
+                <img src="pictures/christmas sandseed.jpg" alt="Christmas Celebration">
+                <p>We held a big school party in order to celebrate the christmas spirit and also have a farewell for the festive holidays</p>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="gallery-item">
+                <img src="pictures/independence pic.jpg" alt="Independence day">
+                <p>We celebrated Botswana's independence day in style and had the kids bring out their best clothes that represented the Botswana flag</p>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="gallery-item">
+                <img src="pictures/creativity pic.jpg" alt="Farm animal">
+                <p>In one of our art classes we had the kids make and create what they think a farm would look like and this included the animals and their environment</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="background-color: grey; padding: 20px 0; width: 100%;">
+    <p style="color: white; text-align: center; margin: 4px 0;">© 2026 SandSeed Academy</p>
+    <p style="color: white; text-align: center; margin: 4px 0;">Ghanzi, Botswana</p>
+    <div style="text-align: center; margin-top: 10px;">
+        <a href="index.html" style="color: white; text-decoration: none; margin: 0 10px;">Home</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin: 0 10px;">About Us</a>
+        <a href="contact.html" style="color: white; text-decoration: none; margin: 0 10px;">Contact Us</a>
+        <a href="Fees.html" style="color: white; text-decoration: none; margin: 0 10px;">School Fees</a>
+        <a href="Gallery.html" style="color: white; text-decoration: none; margin: 0 10px;">Photo Gallery</a>
+    </div>
+</footer>
+
+
+
 
 
 
