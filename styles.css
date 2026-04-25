@@ -1,9 +1,89 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  
+/* ── Global Reset ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* ── Body ── */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    color: #f9f9f9;
+    background-color: #111;
+    line-height: 1.6;
+}
+
+/* ── Main Content ── */
 main {
-    flex: 1;   
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+/* ── Paragraphs ── */
+p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* ── Links ── */
+a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+/* ── Cards (let Bootstrap handle layout, we just style look) ── */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333 !important;
+    color: #f9f9f9;
+}
+.card-title {
+    color: #ffffff;
+}
+.card-text {
+    color: #ccc;
+}
+
+/* ── Images ── */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ── Logo: no border, no radius ── */
+header img {
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+}
+
+/* ── Footer ── */
+footer {
+    background-color: #000;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
