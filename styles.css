@@ -6,29 +6,39 @@
 }
 
 /* ── Body ── */
+/* background-color #111 is a very dark grey, almost black - easier on the eyes than pure #000 */
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     color: #f9f9f9;
     background-color: #111;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ── Main Content ── */
+/* max-width stops your text stretching too wide on large screens */
 main {
     padding: 40px 20px;
     max-width: 1100px;
     margin: 0 auto;
+    flex: 1;
 }
 
 /* ── Headings ── */
+/* Pure white #ffffff for headings so they stand out more than body text */
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
+    margin-bottom: 12px;
 }
 
 /* ── Paragraphs ── */
+/* Slightly off-white #ddd is easier to read than pure white on dark backgrounds */
 p {
     font-size: 1rem;
     color: #ddd;
+    margin-bottom: 10px;
 }
 
 /* ── Links ── */
@@ -41,20 +51,44 @@ a:hover {
     color: #ccc;
 }
 
-/* ── Cards (let Bootstrap handle layout, we just style look) ── */
+/* ── Cards ── */
+/* Dark card background so cards are visible but not brighter than the page */
 .card {
     background-color: #1e1e1e;
-    border: 1px solid #333 !important;
+    border: 1px solid #444 !important;
     color: #f9f9f9;
+    border-radius: 10px;
 }
 .card-title {
     color: #ffffff;
+    font-weight: bold;
 }
 .card-text {
     color: #ccc;
 }
 
-/* ── Images ── */
+/* ── Card Image Label (the activity title bar above photos) ── */
+/* This is the dark label bar added on index.html service cards */
+.card-img-label {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2px solid #555;
+}
+
+/* ── Service Card Images ── */
+/* Keeps all service card images the same height so the cards look even */
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Images (general) ── */
 img {
     max-width: 100%;
     height: auto;
@@ -68,16 +102,98 @@ header img {
     display: inline-block;
 }
 
+/* ── Section Spacing ── */
+/* Adds breathing room between page sections */
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* ── Gallery Styles ── */
+/* Moved here from Gallery.html so all styles live in one place */
+.gallery-section {
+    padding: 40px 20px;
+}
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.gallery-item p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* ── Contact Page Styles ── */
+/* Moved here from contact.html so all styles live in one place */
+.contact-section {
+    padding: 50px 40px;
+}
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 26px;
+    color: #ffffff;
+}
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.contact-card {
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+    padding: 30px 25px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    word-wrap: break-word;
+}
+.contact-card h5 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.contact-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
 /* ── Footer ── */
 footer {
-    background-color: #000;
     color: #f9f9f9;
     text-align: center;
     padding: 20px 0;
     width: 100%;
     margin-top: 40px;
 }
-
+footer p {
+    color: #f9f9f9;
+    margin: 4px 0;
+}
 footer a {
     color: #ccc;
     margin: 0 10px;
