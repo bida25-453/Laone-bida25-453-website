@@ -11,12 +11,7 @@
             "url": "https://bida25-453.github.io/Laone-bida25-453-website/",
             "webRoot": ""
         },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "https://bida25-453.github.io/Laone-bida25-453-website/",
-            "webRoot": "${workspaceFolder}"
-        }
+        
+        
     ]
 }

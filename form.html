@@ -7,7 +7,7 @@
     <title>Send a Message – Sand Seed Academy</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Shared styles -->
     <link rel="stylesheet" href="styles.css">
@@ -145,10 +145,10 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="Fees.html">School Fees</a></li>
                         <li class="nav-item"><a class="nav-link" href="Gallery.html">Photo Gallery</a></li>
-                           <li class="nav-item"><a class="nav-link active" href="form.html">Form</a></li>
+                           <li class="nav-item"><a class="nav-link active" href="form.html">Feedback</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,27 +159,29 @@
     <main>
         <div class="form-section">
             <h2>Send Us a Message</h2>
-            <p class="subtitle">Have a question about our school or want to enrol? Fill in the form below and send us a message.</p>
+            <p class="subtitle">Have a question about our school or want to enroll? Fill in the form below and send us a message.</p>
 
-            <div class="form-card">
+          <div class="form-card">
 
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="e.g. Freedmore Sidume">
+                 <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="e.g. Freedmore Sidume" required>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="e.g. yourname@gmail.com">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. yourname@gmail.com" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Type your message here…"></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Type your message here…" required></textarea>
 
-                <button class="btn-submit" onclick="handleSubmit()">Submit Message</button>
-            </div>
+        <button type="submit" class="btn-submit">Submit Message</button>
+                </form>
+    </div>
         </div>
     </main>
 
     <!-- ── Footer ── -->
     <footer style="background-color: grey; padding: 20px 0; width: 100%;">
-        <p>© 2026 SandSeed Academy</p>
+        <p>© 2026 Sand Seed Academy</p>
         <p>Ghanzi, Botswana</p>
         <div style="text-align: center; margin-top: 10px;">
             <a href="index.html">Home</a>
@@ -187,12 +189,13 @@
             <a href="contact.html">Contact Us</a>
             <a href="Fees.html">School Fees</a>
             <a href="Gallery.html">Photo Gallery</a>
-            <a href="form.html">Form</a>
+                <a href="form.html">Feedback</a>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+ 
+</body>
 </html>
