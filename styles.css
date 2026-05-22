@@ -6,7 +6,6 @@
 }
 
 /* ── Body ── */
-/* background-color #111 is a very dark grey, almost black - easier on the eyes than pure #000 */
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     color: #f9f9f9;
@@ -18,7 +17,6 @@ body {
 }
 
 /* ── Main Content ── */
-/* max-width stops your text stretching too wide on large screens */
 main {
     padding: 40px 20px;
     max-width: 1100px;
@@ -27,14 +25,12 @@ main {
 }
 
 /* ── Headings ── */
-/* Pure white #ffffff for headings so they stand out more than body text */
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     margin-bottom: 12px;
 }
 
 /* ── Paragraphs ── */
-/* Slightly off-white #ddd is easier to read than pure white on dark backgrounds */
 p {
     font-size: 1rem;
     color: #ddd;
@@ -52,7 +48,6 @@ a:hover {
 }
 
 /* ── Cards ── */
-/* Dark card background so cards are visible but not brighter than the page */
 .card {
     background-color: #1e1e1e;
     border: 1px solid #444 !important;
@@ -67,8 +62,8 @@ a:hover {
     color: #ccc;
 }
 
-/* ── Card Image Label (the activity title bar above photos) ── */
-/* This is the dark label bar added on index.html service cards */
+/* ── Card Image Label ── */
+
 .card-img-label {
     background-color: #333;
     color: #ffffff;
@@ -80,7 +75,6 @@ a:hover {
 }
 
 /* ── Service Card Images ── */
-/* Keeps all service card images the same height so the cards look even */
 .card-img-top {
     width: 100%;
     height: 220px;
@@ -103,14 +97,12 @@ header img {
 }
 
 /* ── Section Spacing ── */
-/* Adds breathing room between page sections */
 section {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 /* ── Gallery Styles ── */
-/* Moved here from Gallery.html so all styles live in one place */
 .gallery-section {
     padding: 40px 20px;
 }
@@ -142,7 +134,6 @@ section {
 }
 
 /* ── Contact Page Styles ── */
-/* Moved here from contact.html so all styles live in one place */
 .contact-section {
     padding: 50px 40px;
 }
@@ -202,4 +193,153 @@ footer a {
 footer a:hover {
     color: #fff;
     text-decoration: underline;
+}
+
+
+        /* ── Form Page Styles ── */
+
+        .form-section {
+            padding: 60px 20px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .form-section .subtitle {
+            text-align: center;
+            color: #aaa;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        /* ── Form Card ── */
+        .form-card {
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 40px 36px;
+        }
+
+        /* ── Labels ── */
+        .form-card label {
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        /* ── Inputs & Textarea ── */
+        .form-card input,
+        .form-card textarea {
+            width: 100%;
+            background-color: #2a2a2a;
+            border: 1px solid #555;
+            border-radius: 8px;
+            color: #f9f9f9;
+            font-size: 15px;
+            padding: 12px 14px;
+            margin-bottom: 22px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-card input:focus,
+        .form-card textarea:focus {
+            border-color: #888;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+        }
+
+        .form-card input::placeholder,
+        .form-card textarea::placeholder {
+            color: #666;
+        }
+
+        .form-card textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* ── Submit Button ── */
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            background-color: #555;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn-submit:hover {
+            background-color: #777;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        /* ── Success Message (hidden by default) ── */
+        .success-msg {
+            display: none;
+            text-align: center;
+            color: #7ddc9a;
+            background-color: #1a2e20;
+            border: 1px solid #3a6644;
+            border-radius: 8px;
+            padding: 14px;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+    
+        /*tablets and large phones(768px and below)*/
+        @media (max-width: 768px) {
+      
+            .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+      
+      .fees-layout {
+        flex-direction: column;
+    }
+     
+      .contact-row {
+        flex-direction: column;
+    }
+     
+     .form-card {
+        padding: 24px 16px;
+    }
+
+     .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    }
+
+    /* Small phones only (480px and below) */
+@media (max-width: 480px) {
+
+     /* Make hero heading smaller on very small phones */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Gallery stays single column on tiny screens */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
